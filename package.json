@@ -13,5 +13,10 @@
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
     "load-grunt-tasks": "*"
+  },
+
+  "dependencies": {
+    "jquery": "1.11.1",
+    "lodash": "2.4.1"
   }
 }

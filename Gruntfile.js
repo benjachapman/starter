@@ -11,7 +11,7 @@ module.exports = function(grunt) {
         sass:{
             dist:{
                 files: {
-                    "css/main.css": "scss/main.scss"
+                    "assets/css/main.css": "assets/scss/main.scss"
                 }
             }
         },
@@ -21,8 +21,8 @@ module.exports = function(grunt) {
         cssmin: {
             combine: {
                 files: {
-                    'css/production.css': [
-                        'css/main.css',
+                    'main.css': [
+                        'assets/css/main.css',
                     ]
                 },
  
@@ -31,64 +31,82 @@ module.exports = function(grunt) {
                 }
             }
         },
-        
-        // -- Javscript Hints
-
-        jshint: {
-            options: {
-                eqnull: true,
-                eqeqeq: false,
-            },
-            beforeconcat: ['js/plugins.js','js/scripts.js']
+        browserify: {
+            dist: {
+                options: {
+                    alias: [
+                        'lodash:',
+                        'jquery:'
+                    ]
+                },
+                files: {
+                    'main.js': ['assets/js/dev.js'],
+                }
+            }
         },
+        // browserify: {
+        //     dist: {
+        //         options: {
+        //             alias: [
+        //                 'lodash:',
+        //                 'jquery:'
+        //             ]
+        //         },
+        //         files: [{
+        //             src: '',
+        //             dest: 'main.js'
+        //         }]
+        //     }
+        // }   
 
         // -- Javascript Concatenation
 
-        concat: {   
-            dist: {
-                src: [
-                    'js/plugins.js',
-                    'js/scripts.js'
-                ],
-                dest: 'js/build/global.js',
-            }
-        },
+        // concat: {   
+        //     dist: {
+        //         src: [
+        //             'js/dev.js'
+        //         ],
+        //         dest: 'js/build/main.js',
+        //     }
+        // },
 
         // -- Javascript Minification
 
-        uglify: {
-            build: {
-                src: 'js/build/global.js',
-                dest: 'js/build/global.min.js'
-            }
-        },
+        // uglify: {
+        //     build: {
+        //         src: 'js/main.js',
+        //         dest: 'js/main.min.js'
+        //     }
+        // },
 
         // -- Watch
 
-        watch: {
+        // watch: {
  
-            scripts: {
-                files: ['js/*.js'],
-                tasks: ['jshint:beforeconcat','concat','uglify'],
-                options: {
-                    spawn: false,
-                }
-            },
+        //     scripts: {
+        //         files: ['js/*.js'],
+        //         tasks: ['jshint:beforeconcat','concat','uglify'],
+        //         options: {
+        //             spawn: false,
+        //         }
+        //     },
  
-            css: {
-                files: ['scss/*.scss','/scss/**/*.scss','css/**/*.css'],
-                tasks: ['sass', 'cssmin'],
-                options: {
-                    spawn: false,
-                }
-            }
-        }
+        //     css: {
+        //         files: ['scss/*.scss','/scss/**/*.scss','css/**/*.css'],
+        //         tasks: ['sass', 'cssmin'],
+        //         options: {
+        //             spawn: false,
+        //         }
+        //     }
+        // }
 
     });
 
     // -- Plugins
 
     require('load-grunt-tasks')(grunt);
+
+
  
-    grunt.registerTask('default', ['jshint:beforeconcat','concat', 'uglify', 'sass', 'cssmin', 'watch']);
+    grunt.registerTask('default', ['sass', 'cssmin','browserify:dist']);
 };

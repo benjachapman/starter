@@ -1,3 +1,3 @@
-/node_modules
-/.sass-cache
-/.DS_Store
+Hi Asa!
+
+Thanks so much for your work on the Dynamic Content stuff. Question for you - I’m trying to figure a way for the component to use that “mockdata.json” file when in the test fixture, but not otherwise. One thing that occurs to me is that I could check the json endpoint set in the component, and if it’s some keyword like “testing”, the Pestle module would know to use the mockdata.json file. How does that sound to you? Is that too arcane? 
