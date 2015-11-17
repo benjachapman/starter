@@ -15,7 +15,7 @@ module.exports = function(grunt) {
                 }
             }
         },
-        
+
         // -- CSS Minification
 
         cssmin: {
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
                         'assets/css/main.css',
                     ]
                 },
- 
+
                 options:{
                     report: 'min'
                 }
@@ -34,6 +34,9 @@ module.exports = function(grunt) {
         browserify: {
             dist: {
                 options: {
+                    transform: [
+                        ["reactify"]
+                    ],
                     alias: [
                         'lodash:',
                         'jquery:'
@@ -57,11 +60,11 @@ module.exports = function(grunt) {
         //             dest: 'main.js'
         //         }]
         //     }
-        // }   
+        // }
 
         // -- Javascript Concatenation
 
-        // concat: {   
+        // concat: {
         //     dist: {
         //         src: [
         //             'js/dev.js'
@@ -79,26 +82,26 @@ module.exports = function(grunt) {
         //     }
         // },
 
-        // -- Watch
+        // -- Watch -
 
-        // watch: {
- 
-        //     scripts: {
-        //         files: ['js/*.js'],
-        //         tasks: ['jshint:beforeconcat','concat','uglify'],
-        //         options: {
-        //             spawn: false,
-        //         }
-        //     },
- 
-        //     css: {
-        //         files: ['scss/*.scss','/scss/**/*.scss','css/**/*.css'],
-        //         tasks: ['sass', 'cssmin'],
-        //         options: {
-        //             spawn: false,
-        //         }
-        //     }
-        // }
+        watch: {
+
+            scripts: {
+                files: ['assets/js/dev.js', 'assets/jsx/*.jsx', 'assets/jsx/pages/*.jsx'],
+                tasks: ['browserify'],
+                options: {
+                    spawn: false,
+                }
+            },
+
+            css: {
+                files: ['assets/scss/*.scss'],
+                tasks: ['sass', 'cssmin'],
+                options: {
+                    spawn: false,
+                }
+            }
+        }
 
     });
 
@@ -107,6 +110,6 @@ module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
 
 
- 
+
     grunt.registerTask('default', ['sass', 'cssmin','browserify:dist']);
 };

@@ -1,0 +1,35 @@
+/*
+Vendor Prefixer
+The first argument is the property. The second argument is the value for that property. Third and optional argument is the list of prefixes to use. Default value dumps all prefixes.
+@include prefix(filter, blur(42deg), webkit ms);
+@include prefix(transition, (visibility 0s, opacity 0.2s linear));
+*/
+@mixin prefix($property, $value, $vendors: webkit moz ms o) {
+      @if $vendors {
+        @each $vendor in $vendors {
+          #{"-" + $vendor + "-" + $property}: #{$value};
+        }
+      }
+      #{$property}: #{$value};
+}
+
+$tablet-width: 600px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin notMobile {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}

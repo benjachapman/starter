@@ -1,0 +1,39 @@
+.page {
+	transition-property: left;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	z-index: 30;
+	color:$main;
+	position: fixed;
+	&.page--transition-out {
+        @include prefix(transition, (left 3s ease, opacity 1.5s ease, transform 1s ease, top 3s ease));
+
+		&.one {
+            left: 150%;
+    	-webkit-transform: rotate(-7deg);
+    	transform: rotate(-7deg);
+		}
+		&.two {
+                left: 180%;
+    	-webkit-transform: rotate(10deg);
+    	transform: rotate(10deg);
+		}
+		&.three {
+                left: 200%;
+    	-webkit-transform: rotate(-2deg);
+    	transform: rotate(-2deg);
+		}
+		&.four {
+                left: 180%;
+    	-webkit-transform: rotate(4deg);
+    	transform: rotate(4deg);
+		}
+	}
+	&__content {
+		position:relative;
+        width: 100%;
+		min-height:100%;
+	}
+}

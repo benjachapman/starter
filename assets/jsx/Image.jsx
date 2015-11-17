@@ -1,0 +1,12 @@
+window.$ = require('jquery');
+var React = require('react');
+
+var Image = React.createClass({
+    render: function() {
+        return (
+            <img src="this.props.src"></img>
+        );
+    }
+});
+
+module.exports = Image;

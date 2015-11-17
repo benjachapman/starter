@@ -1,8 +1,9 @@
 {
-  "name": "grunt-starter",
+  "name": "rhu",
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
+    "babelify": "^6.1.2",
     "grunt": "*",
     "grunt-browserify": "^3.8.0",
     "grunt-cli": "*",
@@ -12,11 +13,18 @@
     "grunt-contrib-sass": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
-    "load-grunt-tasks": "*"
+    "gsap":"*",
+    "load-grunt-tasks": "*",
+    "reactify": "^1.1.1",
+    "scrollmagic":"*"
   },
 
   "dependencies": {
     "jquery": "1.11.1",
-    "lodash": "2.4.1"
+    "lodash": "2.4.1",
+    "randomcolor" : "*",
+    "react": "^0.13.3",
+    "wolfy87-eventemitter": "*",
+    "velocity-animate": "^1.2.2"
   }
 }

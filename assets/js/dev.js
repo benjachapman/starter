@@ -1,15 +1,10 @@
-window.$ = require("jquery");
-window._ = require("lodash");
+window.$  = window.jQuery = require("jquery");
+window.React = require('react');
+var Master = require("../jsx/Master.jsx");
+var EventEmitter = require("wolfy87-eventemitter");
 
-$("body").css("background","blue");
-
-var sayYo = function() {
-	console.log("yo");
-};
-$(function() {
-	$('.test-div').click(function() {
-        _.debounce(sayYo(), 1500);
-	  //sayYo();
-
-	});
+$(function(){
+	var appDiv = document.getElementById('app');
+	window.ee = new EventEmitter();
+	React.render(<Master />, appDiv);
 });

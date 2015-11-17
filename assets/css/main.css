@@ -1,7 +1,55 @@
-.test-div {
-  background: red;
-  position: absolute;
-  width: 100px;
-  height: 100px; }
+/*
+Error: File to import not found or unreadable: parallaxthing.
+       Load path: /www/sites/rhu/wwwroot
+        on line 8 of assets/scss/main.scss
 
-/*# sourceMappingURL=main.css.map */
+3: @import 'general';
+4: @import 'page';
+5: @import 'link';
+6: @import 'nav';
+7: @import 'image';
+8: @import 'parallaxthing';
+9: @import url(https://fonts.googleapis.com/css?family=Playfair+Display:900,400|Raleway:400,300,800);
+
+Backtrace:
+assets/scss/main.scss:8
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/import_node.rb:66:in `rescue in import'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/import_node.rb:45:in `import'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:301:in `visit_import'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/stack.rb:79:in `block in with_base'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/stack.rb:115:in `with_frame'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/stack.rb:79:in `with_base'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/exec/sass_scss.rb:396:in `run'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/exec/sass_scss.rb:62:in `process_result'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/exec/base.rb:52:in `parse'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/exec/base.rb:19:in `parse!'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/bin/sass:13:in `<top (required)>'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/bin/sass:23:in `load'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/bin/sass:23:in `<main>'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/bin/ruby_executable_hooks:15:in `eval'
+/Users/bchapman/.rvm/gems/ruby-2.1.4/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: parallaxthing.\A        Load path: /www/sites/rhu/wwwroot\A         on line 8 of assets/scss/main.scss\A \A 3: @import 'general';\A 4: @import 'page';\A 5: @import 'link';\A 6: @import 'nav';\A 7: @import 'image';\A 8: @import 'parallaxthing';\A 9: @import url(https://fonts.googleapis.com/css?family=Playfair+Display:900,400|Raleway:400,300,800);"; }
