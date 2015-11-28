@@ -1,55 +1,174 @@
 /*
-Error: File to import not found or unreadable: parallaxthing.
-       Load path: /www/sites/rhu/wwwroot
-        on line 8 of assets/scss/main.scss
-
-3: @import 'general';
-4: @import 'page';
-5: @import 'link';
-6: @import 'nav';
-7: @import 'image';
-8: @import 'parallaxthing';
-9: @import url(https://fonts.googleapis.com/css?family=Playfair+Display:900,400|Raleway:400,300,800);
-
-Backtrace:
-assets/scss/main.scss:8
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/import_node.rb:66:in `rescue in import'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/import_node.rb:45:in `import'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:301:in `visit_import'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/stack.rb:79:in `block in with_base'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/stack.rb:115:in `with_frame'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/stack.rb:79:in `with_base'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:52:in `map'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/engine.rb:368:in `_render_with_sourcemap'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/engine.rb:285:in `render_with_sourcemap'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/exec/sass_scss.rb:396:in `run'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/exec/sass_scss.rb:62:in `process_result'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/exec/base.rb:52:in `parse'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/lib/sass/exec/base.rb:19:in `parse!'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/gems/sass-3.4.7/bin/sass:13:in `<top (required)>'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/bin/sass:23:in `load'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/bin/sass:23:in `<main>'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/bin/ruby_executable_hooks:15:in `eval'
-/Users/bchapman/.rvm/gems/ruby-2.1.4/bin/ruby_executable_hooks:15:in `<main>'
+Vendor Prefixer
+The first argument is the property. The second argument is the value for that property. Third and optional argument is the list of prefixes to use. Default value dumps all prefixes.
+@include prefix(filter, blur(42deg), webkit ms);
+@include prefix(transition, (visibility 0s, opacity 0.2s linear));
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: parallaxthing.\A        Load path: /www/sites/rhu/wwwroot\A         on line 8 of assets/scss/main.scss\A \A 3: @import 'general';\A 4: @import 'page';\A 5: @import 'link';\A 6: @import 'nav';\A 7: @import 'image';\A 8: @import 'parallaxthing';\A 9: @import url(https://fonts.googleapis.com/css?family=Playfair+Display:900,400|Raleway:400,300,800);"; }
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:900,400|Raleway:400,300,800);
+body {
+  margin: 0;
+  color: white; }
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900px;
+  font-size: 40px;
+  text-shadow: 2px 2px black; }
+
+h1 {
+  font-size: 60px;
+  text-align: center; }
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 20px; }
+  @media (min-width: 600px) {
+    h2 {
+      margin-bottom: 40px; } }
+
+h3 {
+  font-size: 30px; }
+
+p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  margin: 0 0 20px; }
+  @media (min-width: 600px) {
+    p {
+      margin: 0 0 40px; } }
+
+a {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 22px;
+  cursor: pointer;
+  text-decoration: underline;
+  color: white;
+  text-shadow: 1px 1px black; }
+
+img {
+  display: block;
+  width: 100%;
+  margin: 30px 0px 30px;
+  -webkit-box-shadow: 2px 2px 2px #000;
+  -moz-box-shadow: 2px 2px 2px #000;
+  box-shadow: 2px 2px 2px #000; }
+  @media (min-width: 600px) {
+    img {
+      width: 60%;
+      float: left;
+      margin: 0px 40px 40px 0px; }
+      img.right {
+        float: right;
+        margin: 0px 0px 40px 40px; } }
+
+#imga {
+  position: absolute;
+  left: 0px;
+  width: 400px; }
+
+.page {
+  transition-property: left;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 30;
+  color: white;
+  position: fixed;
+  text-align: left;
+  overflow: scroll; }
+  .page__content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    width: auto;
+    min-height: 100%;
+    padding: 0 16px; }
+    @media (min-width: 600px) {
+      .page__content {
+        width: 500px;
+        margin: 0 auto;
+        padding: 0; } }
+    @media (min-width: 1024px) {
+      .page__content {
+        width: 800px; } }
+  .page.page--transition-out {
+    -webkit-transition: left 3s ease, opacity 1.5s ease, transform 1s ease, top 3s ease;
+    -moz-transition: left 3s ease, opacity 1.5s ease, transform 1s ease, top 3s ease;
+    -ms-transition: left 3s ease, opacity 1.5s ease, transform 1s ease, top 3s ease;
+    -o-transition: left 3s ease, opacity 1.5s ease, transform 1s ease, top 3s ease;
+    transition: left 3s ease, opacity 1.5s ease, transform 1s ease, top 3s ease; }
+    .page.page--transition-out.one {
+      left: 150%;
+      -webkit-transform: rotate(-7deg);
+      transform: rotate(-7deg); }
+    .page.page--transition-out.two {
+      left: 180%;
+      -webkit-transform: rotate(10deg);
+      transform: rotate(10deg); }
+    .page.page--transition-out.three {
+      left: 200%;
+      -webkit-transform: rotate(-2deg);
+      transform: rotate(-2deg); }
+    .page.page--transition-out.four {
+      left: 180%;
+      -webkit-transform: rotate(4deg);
+      transform: rotate(4deg); }
+
+.linky {
+  display: inline-block;
+  background: black;
+  position: relative;
+  overflow: hidden;
+  width: 100px;
+  font-size: 19px;
+  text-align: center; }
+  .linky__depression {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    -webkit-transition: top 0.1s ease, left 0.1s ease;
+    -moz-transition: top 0.1s ease, left 0.1s ease;
+    -ms-transition: top 0.1s ease, left 0.1s ease;
+    -o-transition: top 0.1s ease, left 0.1s ease;
+    transition: top 0.1s ease, left 0.1s ease;
+    width: 100%;
+    padding: 7px 0px; }
+    @media (min-width: 600px) {
+      .linky__depression {
+        padding: 10px 0px; } }
+  .linky__size-reserver {
+    position: relative;
+    padding: 7px 0px;
+    opacity: 0; }
+    @media (min-width: 600px) {
+      .linky__size-reserver {
+        padding: 10px 0px; } }
+  .linky.linky--pressed .linky__depression {
+    top: 2px;
+    left: 3px; }
+
+.nav {
+  text-align: center;
+  z-index: 2; }
+
+.image__wrap {
+  width: 100%;
+  height: 0;
+  padding-bottom: 47.25%;
+  margin: 30px 0px 30px;
+  border: 1px solid white;
+  -webkit-box-shadow: 2px 2px 2px #000;
+  -moz-box-shadow: 2px 2px 2px #000;
+  box-shadow: 2px 2px 2px #000; }
+  @media (min-width: 600px) {
+    .image__wrap {
+      width: 60%;
+      float: left;
+      margin: 40px 40px; }
+      .image__wrap.right {
+        float: right;
+        margin: 0px 0px 40px 40px; } }

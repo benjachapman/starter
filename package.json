@@ -21,10 +21,12 @@
 
   "dependencies": {
     "jquery": "1.11.1",
+    "gsap":"*",
+    "scrollmagic":"*",
     "lodash": "2.4.1",
+    "picturefill": "3.0.1",
     "randomcolor" : "*",
     "react": "^0.13.3",
-    "wolfy87-eventemitter": "*",
-    "velocity-animate": "^1.2.2"
+    "wolfy87-eventemitter": "*"
   }
 }

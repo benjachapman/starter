@@ -7,6 +7,24 @@
 	z-index: 30;
 	color:$main;
 	position: fixed;
+	text-align: left;
+	overflow: scroll;
+	&__content {
+    	overflow-y: auto;
+    	overflow-x: hidden;
+		position:relative;
+        width: auto;
+		min-height:100%;
+		padding: 0 16px;
+		@include notMobile {
+			width: 500px;
+			margin: 0 auto;
+			padding: 0;
+		}
+		@include desktop {
+			width: 800px;
+		}
+	}
 	&.page--transition-out {
         @include prefix(transition, (left 3s ease, opacity 1.5s ease, transform 1s ease, top 3s ease));
 
@@ -21,19 +39,14 @@
     	transform: rotate(10deg);
 		}
 		&.three {
-                left: 200%;
-    	-webkit-transform: rotate(-2deg);
-    	transform: rotate(-2deg);
+            left: 200%;
+    		-webkit-transform: rotate(-2deg);
+    		transform: rotate(-2deg);
 		}
 		&.four {
                 left: 180%;
     	-webkit-transform: rotate(4deg);
     	transform: rotate(4deg);
 		}
-	}
-	&__content {
-		position:relative;
-        width: 100%;
-		min-height:100%;
 	}
 }
